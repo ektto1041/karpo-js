@@ -22,5 +22,5 @@ services:
       - /app/apps/server/node_modules # node_modules는 컨테이너에서만 유지
     working_dir: /app/apps/server
     command: pnpm dev
-    environment:
-      - NODE_ENV=development
+    env_file:
+      - server.env.development
