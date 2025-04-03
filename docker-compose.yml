@@ -10,6 +10,8 @@ services:
       - "8080:8080"
     working_dir: /app/apps/server
     command: node dist/main.js
+    env_file:
+      - .env.server.development
   be-dev:
     container_name: karpo-js-server-dev
     build:
@@ -23,4 +25,4 @@ services:
     working_dir: /app/apps/server
     command: pnpm dev
     env_file:
-      - server.env.development
+      - .env.server.development
