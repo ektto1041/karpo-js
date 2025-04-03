@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  be-prod:
+    container_name: karpo-js-server-prod
+    build:
+      context: .
+      dockerfile: docker/server.prod.Dockerfile
+    ports:
+      - "8080:8080"
+    working_dir: /app/apps/server
+    command: node dist/main.js
+  be-dev:
+    container_name: karpo-js-server-dev
+    build:
+      context: .
+      dockerfile: docker/server.dev.Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./apps/server:/app/apps/server # 코드 바인드 마운트
+      - /app/apps/server/node_modules # node_modules는 컨테이너에서만 유지
+    working_dir: /app/apps/server
+    command: pnpm dev
+    environment:
+      - NODE_ENV=development
