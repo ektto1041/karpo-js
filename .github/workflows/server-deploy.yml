@@ -12,23 +12,6 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4.2.2
-      
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4.1.0
-        
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "pnpm"
-
-      - name: Install Dependencies
-        run: |
-          pnpm install
-
-      - name: Create .env file
-        run: |
-          echo "TEST=${{ secrets.TEST }}" >> .env
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -73,6 +56,12 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY_SERVER }}
           script: |
             cd ${{ secrets.PROJECT_PATH_SERVER }}
+
+            cat <<EOF > .env.production
+            TEST=test
+            NODE_ENV=production
+            EOF
+
             sudo docker compose pull
             sudo docker compose down
             sudo docker compose up -d
