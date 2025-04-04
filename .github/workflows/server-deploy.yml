@@ -58,7 +58,7 @@ jobs:
             cd ${{ secrets.PROJECT_PATH_SERVER }}
 
             cat <<EOF > .env.production
-            TEST=test
+            TEST=${{ secrets.TEST }}
             NODE_ENV=production
             EOF
 
