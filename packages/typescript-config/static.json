@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES6", 
+    "target": "ES2022", 
     "module": "ESNext",
     "strict": true,
-    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "allowJs": false,

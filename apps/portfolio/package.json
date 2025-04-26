@@ -4,12 +4,25 @@
   "version": "0.0.1",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "build:dev": "babel src --extensions '.ts' --out-dir src",
+    "watch": "chokidar 'src/**/*.ts' -c \"babel src --extensions '.ts' --out-dir src\"",
+    "clean:dev": "rimraf dev",
+    "clean:dist": "rimraf dist",
+    "dev": "concurrently \"pnpm run watch\" \"live-server src\""
   },
   "license": "UNLICENSED",
   "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-typescript": "^7.27.0",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2",
+    "rimraf": "^6.0.1",
     "typescript": "^5.8.3"
   }
 }
