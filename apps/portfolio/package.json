@@ -9,7 +9,8 @@
     "watch": "chokidar 'src/**/*.ts' -c \"babel src --extensions '.ts' --out-dir src\"",
     "clean:dev": "rimraf dev",
     "clean:dist": "rimraf dist",
-    "dev": "concurrently \"pnpm run watch\" \"live-server src\""
+    "dev": "concurrently \"pnpm run watch\" \"live-server src\"",
+    "build": "pnpm run clean:dist && cpx 'src/**/*.html' dist/ && cpx 'src/**/*.css' dist/ && babel src --extensions '.ts' --out-dir dist"
   },
   "license": "UNLICENSED",
   "devDependencies": {
@@ -21,6 +22,7 @@
     "@repo/typescript-config": "workspace:*",
     "chokidar-cli": "^3.0.0",
     "concurrently": "^9.1.2",
+    "cpx": "^1.5.0",
     "live-server": "^1.2.2",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.3"
