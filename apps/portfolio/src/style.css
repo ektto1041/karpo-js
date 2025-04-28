@@ -9,6 +9,7 @@
 }
 
 :root {
+  --color-white: #ffffff;
   --color-black: #000000;
   --color-black-o25: rgba(0, 0, 0, 0.25);
   --color-gray: #eeeeee;
@@ -17,6 +18,10 @@
   --color-border-stack-development: #0a7ea5;
   --color-border-stack-deploy: #ff9902;
   --color-shadow-h: var(--color-black-o25);
+
+  --color-chim: #c50066;
+  --color-karpedia: #2c2c2c;
+  --color-gasannes: #241c24;
 
   --shadow-h: 0 4px 4px var(--color-shadow-h);
   --shadow-m: 0 2px 4px var(--color-shadow-h);
@@ -132,6 +137,74 @@ section > h1 {
   padding-top: 16px;
 }
 
+.history {
+  background-color: var(--color-gray);
+}
+
+.history .content {
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 64px;
+  height: 100%;
+}
+
+.line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 30px;
+  top: 16px;
+  width: 4px;
+  height: calc(100% - 32px);
+  background-color: var(--color-black);
+  border-radius: 2px;
+}
+
+.history-item {
+  position: relative;
+  width: 100%;
+  padding-left: 64px;
+  padding-bottom: 32px;
+}
+
+.history-item::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  top: 10px;
+  left: 26px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+}
+
+.history-item h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.history-item p {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+.project-list {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 /* StackItem */
 .stack-item {
   position: relative;
@@ -227,6 +300,11 @@ section > h1 {
   transform: var(--translate-y-h);
 }
 
+.link-button.big {
+  width: 48px;
+  height: 48px;
+}
+
 .link-button:hover {
   box-shadow: var(--shadow-m);
   transform: var(--translate-y-m);
@@ -243,6 +321,12 @@ section > h1 {
   object-fit: cover;
 }
 
+.link-button.big img {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
 .link-button .tooltip {
   transition: opacity 0.25s;
   opacity: 0;
@@ -251,11 +335,16 @@ section > h1 {
   height: 16px;
   display: flex;
   align-items: center;
+  text-wrap: nowrap;
   top: 0;
   left: 0;
   transform: translateX(calc(16px - 50%)) translateY(32px);
-  font-size: 8px;
+  font-size: 12px;
   font-weight: bold;
+}
+
+.link-button.big .tooltip {
+  transform: translateX(calc(24px - 50%)) translateY(52px);
 }
 
 .link-button:hover .tooltip {
