@@ -1,11 +1,30 @@
 @import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
 
+@font-face {
+  font-family: "D2Coding";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --color-black: #000000;
   --color-black-o25: rgba(0, 0, 0, 0.25);
   --color-gray: #eeeeee;
 
+  --color-border-stack-project: #6db33f;
+  --color-border-stack-development: #0a7ea5;
+  --color-border-stack-deploy: #ff9902;
   --color-shadow-h: var(--color-black-o25);
+
+  --shadow-h: 0 4px 4px var(--color-shadow-h);
+  --shadow-m: 0 2px 4px var(--color-shadow-h);
+  --shadow-l: 0 0 4px var(--color-shadow-h);
+
+  --translate-y-h: translateY(0);
+  --translate-y-m: translateY(2px);
+  --translate-y-l: translateY(4px);
 }
 
 * {
@@ -31,8 +50,8 @@ h1 {
   font-weight: bold;
 }
 
-.shadow-h {
-  box-shadow: 0 4px 4px var(--color-shadow-h);
+section > h1 {
+  padding-bottom: 16px;
 }
 
 main {
@@ -40,9 +59,17 @@ main {
   flex-direction: column;
 }
 
-.my-info {
+section {
   width: 100%;
-  padding: 60px 0;
+  padding: 80px 0;
+}
+
+section > h1 {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.my-info {
   background-color: var(--color-gray);
 }
 
@@ -86,6 +113,104 @@ main {
   gap: 16px;
 }
 
+.stack .content {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.legend {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 16px;
+}
+
+/* StackItem */
+.stack-item {
+  position: relative;
+  width: 200px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-l);
+  transform: var(--translate-y-l);
+  transition:
+    box-shadow 0.25s,
+    transform 0.25s;
+  cursor: pointer;
+}
+
+.stack-item:hover {
+  box-shadow: var(--shadow-m);
+  transform: var(--translate-y-m);
+}
+
+.stack-item.project {
+  border: 1px solid var(--color-border-stack-project);
+}
+
+.stack-item.development {
+  border: 1px solid var(--color-border-stack-development);
+}
+.stack-item.deploy {
+  border: 1px solid var(--color-border-stack-deploy);
+}
+
+.stack-item h3 {
+  position: absolute;
+  top: -14px;
+  left: 16px;
+  height: 28px;
+  line-height: 28px;
+  background-color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 16px;
+}
+
+.stack-item ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* StackBadge */
+.stack-badge {
+  position: relative;
+  font-family: D2Coding;
+  font-size: 16px;
+  padding: 4px 8px;
+  pointer-events: none;
+  font-weight: bold;
+}
+
+.stack-badge > .strong {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #ff2020;
+  overflow: hidden;
+}
+
+.stack-badge > .strong > span {
+  position: absolute;
+  left: 3px;
+  top: -4px;
+  height: 28px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+/* LinkButton */
 .link-button {
   width: 32px;
   height: 32px;
@@ -98,18 +223,18 @@ main {
   transition:
     box-shadow 0.25s,
     transform 0.25s;
-  box-shadow: 0 4px 4px var(--color-shadow-h);
-  transform: translateY(0);
+  box-shadow: var(--shadow-h);
+  transform: var(--translate-y-h);
 }
 
 .link-button:hover {
-  box-shadow: 0 2px 4px var(--color-shadow-h);
-  transform: translateY(2px);
+  box-shadow: var(--shadow-m);
+  transform: var(--translate-y-m);
 }
 
 .link-button:active {
-  box-shadow: 0 0 4px var(--color-shadow-h);
-  transform: translateY(4px);
+  box-shadow: var(--shadow-l);
+  transform: var(--translate-y-l);
 }
 
 .link-button img {
@@ -135,4 +260,13 @@ main {
 
 .link-button:hover .tooltip {
   opacity: 1;
+}
+
+/* presets */
+.shadow-h {
+  box-shadow: var(--shadow-h);
+}
+
+.weight-normal {
+  font-weight: 200;
 }
