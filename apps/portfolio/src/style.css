@@ -120,6 +120,19 @@ section > h1 {
   display: flex;
   padding: 0 8px;
   gap: 16px;
+  position: relative;
+}
+
+.link-list > a {
+  position: relative;
+}
+
+.link-list > a > span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .stack .content {
