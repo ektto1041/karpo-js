@@ -141,6 +141,14 @@ section > h1 {
   padding-top: 16px;
 }
 
+.graph-wrapper {
+  width: 800px;
+  margin: 0 auto;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+}
+
 .history {
   background-color: var(--color-gray);
 }
