@@ -282,6 +282,7 @@ section > h1 {
 }
 
 .project-content .description {
+  line-height: 24px;
   margin-bottom: 8px;
 }
 
