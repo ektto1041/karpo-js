@@ -1,15 +1,12 @@
 import type { ChartConfiguration, ChartData } from "chart.js";
+import { stackStatistics, statisticsColors } from "./data.js";
 
 const data: ChartData<"doughnut"> = {
-  labels: ["javascript", "typescript", "React.js"],
+  labels: stackStatistics.map((item) => item.label),
   datasets: [
     {
-      data: [100, 100, 100],
-      backgroundColor: [
-        "rgb(255, 99, 132)",
-        "rgb(54, 162, 235)",
-        "rgb(255, 205, 86)",
-      ],
+      data: stackStatistics.map((item) => item.count),
+      backgroundColor: statisticsColors,
       borderRadius: 8,
     },
   ],
@@ -29,5 +26,7 @@ const config: ChartConfiguration<"doughnut"> = {
     },
   },
 };
+
+console.log(stackStatistics);
 
 new Chart(document.getElementById("graph") as HTMLCanvasElement, config);
