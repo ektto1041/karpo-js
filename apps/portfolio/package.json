@@ -10,7 +10,7 @@
     "clean:dev": "rimraf dev",
     "clean:dist": "rimraf dist",
     "dev": "concurrently \"pnpm run watch\" \"live-server src\"",
-    "build": "pnpm run clean:dist && cpx 'src/**/*.html' dist/ && cpx 'src/**/*.css' dist/ && babel src --extensions '.ts' --out-dir dist"
+    "build": "pnpm run clean:dist && cpx 'src/**/*.html' dist/ && cpx 'src/**/*.css' dist/ && cpx 'src/assets/*' dist/assets && babel src --extensions '.ts' --out-dir dist"
   },
   "license": "UNLICENSED",
   "devDependencies": {
