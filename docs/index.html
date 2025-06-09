@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="./style.css" />
+    <title>박상연 포트폴리오</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="logo">
+          <img src="./assets/karpo-js-logo.png" alt="Karpo JS logo" />
+        </div>
+        <h1>
+          포트폴리오
+        </h1>
+        <nav>
+          <a href="#my-info">정보</a>
+          <a href="#stack">기술스택</a>
+          <a href="#history">연혁</a>
+          <a href="#project">프로젝트</a>
+        </nav>
+      </header>
+      <section id="my-info">
+        <article>
+          <div class="img-wrapper shadow-h">
+            <img src="./assets/profile-img.png" alt="박상연 증명사진" />
+          </div>
+          <div class="content">
+            <h1>박상연</h1>
+            <p class="job">FE 개발자</p>
+            <p>
+              5개의 웹 프로젝트를 <strong>기획부터 개발, 배포</strong>까지 직접
+              진행하며 웹 개발 역량을 쌓아왔고, 그 과정에서
+              <strong>프론트엔드 중심</strong>의 기술을 중점적으로
+              학습해왔습니다.
+            </p>
+            <p>
+              UI/UX에서 가장 중요한 요소는
+              <strong>일관성과 반응성</strong>이라고 생각하며, 이러한 기준을
+              바탕으로 사용자 경험을 고려한 개발을 지향합니다.
+            </p>
+            <ul class="link-list">
+              <li>
+                <a
+                  href="https://github.com"
+                  class="link-button"
+                  target="_blank"
+                >
+                  <img src="./assets/github.svg" alt="Github" />
+                  <div class="tooltip">Github</div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://karpo-js.tistory.com/"
+                  class="link-button"
+                  target="_blank"
+                >
+                  <img src="./assets/blog.svg" alt="Blog" />
+                  <div class="tooltip">Blog</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section id="stack">
+        <h1>기술스택</h1>
+        <article>
+          <div class="graph-wrapper">
+            <canvas id="graph"></canvas>
+          </div>
+          <div class="content">
+            <div class="stack-item project">
+              <h3>Project</h3>
+              <ul class="stack-list">
+                <li><div class="stack-badge">Slack</div></li>
+                <li><div class="stack-badge">Notion</div></li>
+                <li><div class="stack-badge">Figma</div></li>
+                <li><div class="stack-badge">Jira</div></li>
+                <li><div class="stack-badge">Github</div></li>
+                <li><div class="stack-badge">Postman</div></li>
+              </ul>
+            </div>
+            <div class="stack-item development">
+              <h3>Development</h3>
+              <ul class="stack-list">
+                <li>
+                  <div class="stack-badge">
+                    Javascript
+                    <div class="strong">
+                      <span>Javascript</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="stack-badge">
+                    React.js
+                    <div class="strong">
+                      <span>React.js</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="stack-badge">
+                    Next.js
+                    <div class="strong">
+                      <span>Next.js</span>
+                    </div>
+                  </div>
+                </li>
+                <li><div class="stack-badge">Spring Boot</div></li>
+                <li><div class="stack-badge">Nest.js</div></li>
+                <li><div class="stack-badge">Typescript</div></li>
+              </ul>
+            </div>
+            <div class="stack-item deploy">
+              <h3>Deploy</h3>
+              <ul class="stack-list">
+                <li><div class="stack-badge">AWS</div></li>
+                <li><div class="stack-badge">Docker</div></li>
+                <li><div class="stack-badge">Github Action</div></li>
+                <li><div class="stack-badge">Nginx</div></li>
+              </ul>
+            </div>
+          </div>
+          <div class="legend">
+            <div class="stack-badge weight-normal">경험해 본 기술</div>
+            <div class="stack-badge">여러번 사용해 본 기술</div>
+            <div class="stack-badge">
+              학습중인 기술
+              <div class="strong">
+                <span>학습중인 기술</span>
+              </div>
+            </div>
+          </div>
+          
+        </article>
+      </section>
+
+      <section id="history">
+        <h1>연혁</h1>
+        <article>
+          <div class="content">
+            <div class="line"></div>
+            <div class="history-item">
+              <h3>2020</h3>
+              <ul class="project-list">
+                <li>
+                  <a href="#chimtooview" class="link-button big">
+                    <img src="./assets/chim-logo.png" alt="Chimtooview Logo" />
+                    <div class="tooltip">Chimtooview</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="history-item">
+              <h3>2022</h3>
+              <ul class="project-list">
+                <li>
+                  <a href="#gigs" class="link-button big">
+                    <img src="./assets/gigs-logo.png" alt="gigs Logo" />
+                    <div class="tooltip">gigs</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="history-item">
+              <h3>2023</h3>
+              <ul class="project-list">
+                <li>
+                  <a href="#karpedia" class="link-button big">
+                    <img src="./assets/karpedia-logo.png" alt="karpeida Logo" />
+                    <div class="tooltip">Karpedia</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="history-item">
+              <h3>2024</h3>
+              <p>아주대학교 미디어학과/소프트웨어학과 졸업</p>
+              <p>현대 오토에버 모빌리티 SW 스쿨 (~2025.02.26)</p>
+              <ul class="project-list">
+                <li>
+                  <a href="#wplanner" class="link-button big">
+                    <img
+                      src="./assets/wplanner-logo.png"
+                      alt="W Planner Logo"
+                    />
+                    <div class="tooltip">W Planner</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#tinyroom" class="link-button big">
+                    <img
+                      src="./assets/tinyroom-logo.png"
+                      alt="Tiny Room Logo"
+                    />
+                    <div class="tooltip">Tiny Room</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#gasannes" class="link-button big">
+                    <img src="./assets/gasannes-logo.png" alt="gasannes Logo" />
+                    <div class="tooltip">gasannes</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#pjletter" class="link-button big">
+                    <img src="./assets/pj-logo.png" alt="pj letter Logo" />
+                    <div class="tooltip">PJ Letter</div>
+                  </a>
+                </li>
+                </li>
+                <li>
+                  <a href="#whatcha" class="link-button big">
+                    <img src="./assets/whatcha-logo.png" alt="Whatcha Logo" />
+                    <div class="tooltip">Whatcha</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="history-item">
+              <h3>2025</h3>
+              <ul class="project-list">
+                <li>
+                  <a href="#karporeviewer" class="link-button big">
+                    <img src="./assets/karpo-reviewer-logo.png" alt="Karpo Reviewer Logo" />
+                    <div class="tooltip">Karpo Reviewer</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#stockholmes" class="link-button big">
+                    <img src="./assets/holmes-logo.png" alt="StockHolmes Logo" />
+                    <div class="tooltip">StockHolmes</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="project">
+        <h1>프로젝트</h1>
+        <article>
+          <ul class="content">
+            <li>
+              <div class="project-item">
+                <div class="title">
+                  <div class="project-logo">
+                    <img src="./assets/karpo-reviewer-logo.png" alt="Karpo Reviewer Logo" />
+                  </div>
+                  <h3 id="karporeviewer">Karpo Reviewer</h3>
+                  <p>2025.01</p>
+                  <div class="link-list">
+                    <a
+                      href="https://github.com/ektto1041/karpo-review-server"
+                      class="flat-button"
+                      target="_blank"
+                    >
+                      <img src="./assets/github.svg" alt="Github" />
+                    </a>
+                    
+                  </div>
+                </div>
+                <div class="project-content">
+                  <p class="description">Karpo Reviewer는 Github PR의 생성/수정에 따라 AI 기반 코드 리뷰 댓글을 작성해주는 서버입니다.</p>
+                  <div class="stack-list">
+                    <div class="stack-badge">Node.js</div>
+                    <div class="stack-badge">Express.js</div>
+                    <div class="stack-badge">axios</div>
+                    <div class="stack-badge">Docker</div>
+                    <div class="stack-badge">github action</div>
+                    <div class="stack-badge">Open AI</div>
+                  </div>
+                  <ul class="image-list">
+                    <li>
+                      <img class="project-image" src="./assets/karpo-reviewer1.png" />
+                    </li>
+                    <li>
+                      <img class="project-image" src="./assets/karpo-reviewer2.png" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="project-item">
+                <div class="title">
+                  <div class="project-logo">
+                    <img src="./assets/pj-logo.png" alt="PJ Letters Logo" />
+                  </div>
+                  <h3 id="pjletter">PJ Letters</h3>
+                  <p>2024.12</p>
+                  <div class="link-list">
+                    <a
+                      href="https://drive.google.com/file/d/1-3WTB-qVCFLre4KI9p-XbiW2rO_HgipG/view?usp=sharing"
+                      class="flat-button"
+                      target="_blank"
+                    >
+                      <img src="./assets/video.svg" alt="Video" />
+                    </a>
+                    <a
+                      href="https://github.com/ektto1041/pj-letters-fe"
+                      class="flat-button"
+                      target="_blank"
+                    >
+                      <img src="./assets/github.svg" alt="Github" />
+                    </a>
+                    
+                  </div>
+                </div>
+                <div class="project-content">
+                  <p class="description">PJ Letters는 주변인들과 롤링페이퍼를 작성하고 공유하는 서비스로,<br />현대 오토에버 모빌리티 SW 스쿨 교육생들을 대상으로 운영했던 서비스입니다.</p>
+                  <div class="stack-list">
+                    <div class="stack-badge">React.js</div>
+                    <div class="stack-badge">css module</div>
+                    <div class="stack-badge">typescript</div>
+                    <div class="stack-badge">axios</div>
+                    <div class="stack-badge">zustand</div>
+                    <div class="stack-badge">Docker</div>
+                    <div class="stack-badge">github action</div>
+                  </div>
+                  <ul class="image-list">
+                    <li>
+                      <img class="project-image" src="./assets/pj1.png" />
+                    </li>
+                    <li>
+                      <img class="project-image" src="./assets/pj2.png" />
+                    </li>
+                    <li>
+                      <img class="project-image" src="./assets/pj3.png" />
+                    </li>
+                    <li>
+                      <img class="project-image" src="./assets/pj4.png" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="project-item">
+                <div class="title">
+                  <div class="project-logo">
+                    <img src="./assets/gasannes-logo.png" alt="gasannes Logo" />
+                  </div>
+                  <h3 id="gasannes">gasannes</h3>
+                  <p>2024.11</p>
+                  <div class="link-list">
+                    <a
+                      href="https://drive.google.com/file/d/1dNMuN9FU0LD65_bzb47AZeXk3sOR0E4l/view?usp=sharing"
+                      class="flat-button"
+                      target="_blank"
+                    >
+                      <img src="./assets/video.svg" alt="Video" />
+                    </a>
+                    <a
+                      href="https://www.canva.com/design/DAGW4X4V11Q/QhsEziay6rIkpa026fwizA/view?utm_content=DAGW4X4V11Q&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=heee1f14190"
+                      class="flat-button"
+                      target="_blank"
+                    >
+                      <img src="./assets/presentation.svg" alt="Presentation" />
+                    </a>
+                    <a
+                      href="https://github.com/ektto1041/GasannesFE"
+                      class="flat-button"
+                      target="_blank"
+                    >
+                      <img src="./assets/github.svg" alt="Github" />
+                    </a>
+                    
+                  </div>
+                </div>
+                <div class="project-content">
+                  <p class="description">Gasannes는 현대 오토에버 모빌리티 SW 스쿨에서 진행한 영화 리뷰 사이트 프로젝트로,<br />스케줄러를 통해 주기적으로 시상식을 진행하고, 유저는 시상식에 참여하여 직접 작품에 투표할 수 있는 기능을 가진 서비스입니다.</p>
+                  <div class="stack-list">
+                    <div class="stack-badge">React.js</div>
+                    <div class="stack-badge">css module</div>
+                    <div class="stack-badge">typescript</div>
+                    <div class="stack-badge">tanstack query</div>
+                    <div class="stack-badge">zustand</div>
+                    <div class="stack-badge">Docker</div>
+                    <div class="stack-badge">github action</div>
+                  </div>
+                  <ul class="image-list">
+                    <li>
+                      <img class="project-image" src="./assets/gasannes1.png" />
+                    </li>
+                    <li>
+                      <img class="project-image" src="./assets/gasannes2.png" />
+                    </li>
+                    <li>
+                      <img class="project-image" src="./assets/gasannes3.png" />
+                    </li>
+                    <li>
+                      <img class="project-image" src="./assets/gasannes4.png" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="project-item">
+                <div class="title">
+                  <div class="project-logo">
+                    <img src="./assets/tinyroom-logo.png" alt="Tiny Room Logo" />
+                  </div>
+                  <h3 id="tinyroom">TinyRoom</h3>
+                  <p>2024.10</p>
+                  <div class="link-list">
+                    <a
+                      href="https://drive.google.com/file/d/1-BBMLiFQwOCljEddzaivCwlyZiX47Asg/view?usp=drive_link"
+                      class="flat-button"
+                      target="_blank"
+                    >
+                      <img src="./assets/video.svg" alt="Video" />
+                    </a>
+                    <a
+                      href="https://github.com/ektto1041/Tiny_Room_Blog"
+                      class="flat-button"
+                      target="_blank"
+                    >
+                      <img src="./assets/github.svg" alt="Github" />
+                    </a>
+                    
+                  </div>
+                </div>
+                <div class="project-content">
+                  <p class="description">Tiny Room은 현대 오토에버 모빌리티 SW 스쿨에서 진행한 블로그 프로젝트로,<br />유저가 자신의 방을 꾸밀 수 있는 기능을 가지고 있는 블로그 서비스입니다.</p>
+                  <div class="stack-list">
+                    <div class="stack-badge">React.js</div>
+                    <div class="stack-badge">styled components</div>
+                    <div class="stack-badge">MUI</div>
+                    <div class="stack-badge">zustand</div>
+                  </div>
+                  <ul class="image-list">
+                    <li>
+                      <img class="project-image" src="./assets/tinyroom1.png" />
+                    </li>
+                    <li>
+                      <img class="project-image" src="./assets/tinyroom2.png" />
+                    </li>
+                    <li>
+                      <img class="project-image" src="./assets/tinyroom3.png" />
+                    </li>
+                    <li>
+                      <img class="project-image" src="./assets/tinyroom4.png" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="project-item">
+                <div class="title">
+                  <div class="project-logo">
+                    <img src="./assets/karpedia-logo.png" alt="Karpedia Logo" />
+                  </div>
+                  <h3 id="karpedia">Karpedia</h3>
+                  <p>2023.03 ~ 2024.01</p>
+                  <div class="link-list">
+                    <a
+                      href="https://github.com/ektto1041/karpedia"
+                      class="flat-button"
+                      target="_blank"
+                    >
+                      <img src="./assets/github.svg" alt="Github" />
+                      <span>FE</span>
+                    </a>
+                    <a
+                      href="https://github.com/ektto1041/karpedia-server"
+                      class="flat-button"
+                      target="_blank"
+                    >
+                      <img src="./assets/github.svg" alt="Github" />
+                      <span>BE</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <p class="description">Karpedia는 학습 내용을 정리하는 개인 블로그이자 포트폴리오입니다.<br />(※ 현재는 배포되지 않은 개인 프로젝트입니다.)</p>
+                  <div class="stack-list">
+                    <div class="stack-badge">Next.js</div>
+                    <div class="stack-badge">Nest.js</div>
+                    <div class="stack-badge">typescript</div>
+                    <div class="stack-badge">AWS</div>
+                  </div>
+                  <ul class="image-list">
+                    <li>
+                      <img class="project-image" src="./assets/karpedia1.png" />
+                    </li>
+                    <li>
+                      <img class="project-image" src="./assets/karpedia2.png" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="project-item">
+                <div class="title">
+                  <div class="project-logo border-gray">
+                    <img src="./assets/gigs-logo.png" alt="gigs Logo" />
+                  </div>
+                  <h3 id="gigs">gigs</h3>
+                  <p>2022.10 ~ 2023.01</p>
+                  <div class="link-list">
+                    <a
+                      href="https://drive.google.com/file/d/1WQYjMNTXQqCrMf8zzeVsIYIqcIGrlZVS/view?usp=sharing"
+                      class="flat-button"
+                      target="_blank"
+                    >
+                      <img src="./assets/video.svg" alt="Video" />
+                    </a>
+                    <a
+                      href="https://github.com/signalman/gigs"
+                      class="flat-button"
+                      target="_blank"
+                    >
+                      <img src="./assets/github.svg" alt="Github" />
+                    </a>
+                    
+                  </div>
+                </div>
+                <div class="project-content">
+                  <p class="description">무명 가수를 위해 대여할 수 있는 무대를 찾아주는 웹 서비스</p>
+                  <div class="stack-list">
+                    <div class="stack-badge">React.js</div>
+                    <div class="stack-badge">Spring Boot</div>
+                    <div class="stack-badge">AWS</div>
+                    <div class="stack-badge">kakao map API</div>
+                  </div>
+                  <ul class="image-list">
+                    <li>
+                      <img class="project-image" src="./assets/gigs1.png" />
+                    </li>
+                    <li>
+                      <img class="project-image" src="./assets/gigs2.png" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="project-item">
+                <div class="title">
+                  <div class="project-logo">
+                    <img src="./assets/chim-logo.png" alt="Chimtooview Logo" />
+                  </div>
+                  <h3 id="chimtooview">Chimtooview</h3>
+                  <p>2020.10 ~ 2021.01</p>
+                  <div class="link-list">
+                    <a
+                      href="https://github.com/ektto1041/Chimtooview"
+                      class="flat-button"
+                      target="_blank"
+                    >
+                      <img src="./assets/github.svg" alt="Github" />
+                      <span>FE</span>
+                    </a>
+                    <a
+                      href="https://github.com/ektto1041/Chimtooview_server"
+                      class="flat-button"
+                      target="_blank"
+                    >
+                      <img src="./assets/github.svg" alt="Github" />
+                      <span>BE</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <p class="description">Youtube 침착맨 채널의 영상 통계를 보여주고, 다양한 조건으로 영상을 검색할 수 있는 서비스</p>
+                  <div class="stack-list">
+                    <div class="stack-badge">React.js</div>
+                    <div class="stack-badge">Spring Boot</div>
+                    <div class="stack-badge">AWS</div>
+                  </div>
+                  <ul class="image-list">
+                    <li>
+                      <img class="project-image" src="./assets/chim1.png" />
+                    </li>
+                    <li>
+                      <img class="project-image" src="./assets/chim2.png" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/core-js-bundle@3.42.0/minified.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
