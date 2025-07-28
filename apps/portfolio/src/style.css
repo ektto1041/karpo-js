@@ -27,6 +27,7 @@
   --color-black-4: #000000;
 
   --color-black-0-o25: rgba(0, 0, 0, 0.25);
+  --color-black-0-o50: rgba(0, 0, 0, 0.5);
 
   --color-primary: #2b50ab;
   --color-primary-light: #3b66ce;
@@ -537,4 +538,105 @@ section > h2 {
 
 .weight-normal {
   font-weight: 200;
+}
+
+/* Modal */
+.modal-background {
+  display: none;
+  justify-content: center;
+  align-items: flex-end;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: var(--color-black-0-o25);
+}
+
+.modal-close-button > img {
+  width: 75%;
+  height: 75%;
+}
+
+.modal-box {
+  border: 1px solid var(--color-grey-1);
+  border-radius: 8px 8px 0 0;
+  background-color: var(--color-white-0);
+  padding: 32px;
+  position: absolute;
+  width: 100%;
+  height: 90dvh;
+  max-width: 800px;
+  cursor: auto;
+  animation: openModal 0.5s;
+  box-shadow: var(--shadow-m);
+}
+
+.modal-header {
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.modal-close-button {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: var(--color-black-0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.modal-close-button:hover {
+  background-color: var(--color-grey-4);
+}
+
+.modal-close-button > img {
+  width: 10px;
+  height: 10px;
+}
+
+.modal-content {
+  color: var(--color-black-4);
+  height: calc(100% - 72px);
+  overflow-y: scroll;
+}
+
+.modal-content > h3 {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-lg);
+  margin-top: 32px;
+}
+
+.modal-content > img {
+  display: block;
+  width: 80%;
+  margin: 16px auto 0 auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow-m);
+}
+
+.modal-content > p {
+  font-size: var(--fs-md);
+  line-height: var(--lh-md);
+  margin-top: 4px;
+}
+
+@keyframes openModal {
+  0% {
+    transform: translateY(5%);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
