@@ -110,6 +110,10 @@ html {
   color: var(--color-black-0);
 }
 
+html.show-modal {
+  overflow: hidden;
+}
+
 li {
   list-style: none;
 }
@@ -554,6 +558,10 @@ section > h2 {
   background-color: var(--color-black-0-o25);
 }
 
+.modal-background.show {
+  display: flex;
+}
+
 .modal-close-button > img {
   width: 75%;
   height: 75%;
@@ -613,6 +621,9 @@ section > h2 {
   font-size: var(--fs-lg);
   line-height: var(--lh-lg);
   margin-top: 32px;
+  background-color: var(--color-white-2);
+  padding-left: 8px;
+  border-radius: 8px;
 }
 
 .modal-content > img {
@@ -626,7 +637,7 @@ section > h2 {
 .modal-content > p {
   font-size: var(--fs-md);
   line-height: var(--lh-md);
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 @keyframes openModal {

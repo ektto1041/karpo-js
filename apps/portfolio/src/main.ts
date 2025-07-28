@@ -1,41 +1,60 @@
-const html = document.querySelector("html") as HTMLHtmlElement;
+const html = document.documentElement;
 
-const devCards: HTMLLIElement[] = Array.from(
-  document.getElementsByClassName("dev-card")
-) as HTMLLIElement[];
+function showModal(modalBackground: HTMLDivElement) {
+  modalBackground.classList.add("show");
+  html.classList.add("show-modal");
+}
 
-devCards.forEach((devCard) => {
-  devCard.addEventListener("click", () => {
+function hideModal(modalBackground: HTMLDivElement) {
+  modalBackground.classList.remove("show");
+  html.classList.remove("show-modal");
+}
+
+function addModalEventListeners(modalBackground: HTMLDivElement) {
+  const modalBox = modalBackground.querySelector(
+    ".modal-box"
+  ) as HTMLDivElement | null;
+  const closeButton = modalBackground.querySelector(
+    ".modal-close-button"
+  ) as HTMLDivElement | null;
+
+  if (!modalBox || !closeButton) return;
+
+  // 배경 클릭 시 닫기
+  modalBackground.addEventListener("click", (e: MouseEvent) => {
+    e.stopPropagation();
+    hideModal(modalBackground);
+  });
+
+  // 모달 내부 클릭 시 이벤트 전파 방지
+  modalBox.addEventListener("click", (e: MouseEvent) => {
+    e.stopPropagation();
+  });
+
+  // 닫기 버튼 클릭 시 닫기
+  closeButton.addEventListener("click", (e: MouseEvent) => {
+    e.stopPropagation();
+    hideModal(modalBackground);
+  });
+}
+
+function initModalTriggers() {
+  const devCards = Array.from(
+    document.getElementsByClassName("dev-card")
+  ) as HTMLLIElement[];
+
+  devCards.forEach((devCard) => {
     const modalBackground = devCard.querySelector(
       ".modal-background"
     ) as HTMLDivElement | null;
+    if (!modalBackground) return;
 
-    if (modalBackground) modalBackground.style.display = "flex";
+    // 카드 클릭 시 모달 열기
+    devCard.addEventListener("click", () => showModal(modalBackground));
 
-    html.style.overflow = "hidden";
+    // 모달 관련 이벤트 등록
+    addModalEventListeners(modalBackground);
   });
-});
+}
 
-function onModalBackgroundClick(modalBackground: HTMLDivElement) {}
-
-const modalBackgrounds = Array.from(
-  document.querySelectorAll(".modal-background")
-) as HTMLDivElement[];
-
-modalBackgrounds.forEach((modalBackground) => {
-  modalBackground.addEventListener("click", (e) => {
-    e.stopPropagation();
-    modalBackground.style.display = "none";
-    html.style.overflow = "auto";
-  });
-});
-
-const modalBoxes = Array.from(
-  document.querySelectorAll(".modal-box")
-) as HTMLDivElement[];
-
-modalBoxes.forEach((modalBox) => {
-  modalBox.addEventListener("click", (e) => {
-    e.stopPropagation();
-  });
-});
+initModalTriggers();
