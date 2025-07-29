@@ -638,12 +638,28 @@ section > h2 {
   border-radius: 8px;
 }
 
+.modal-content > h2 {
+  margin-top: 32px;
+  background-color: var(--color-white-2);
+  padding-left: 8px;
+  border-radius: 8px;
+}
+
 .modal-content > img {
   display: block;
   width: 80%;
   margin: 16px auto 0 auto;
   border-radius: 8px;
   box-shadow: var(--shadow-m);
+}
+
+.modal-content a {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
 }
 
 .modal-content > p {
