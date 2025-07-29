@@ -397,7 +397,7 @@ section > h2 {
 .dev-stack-list {
   display: flex;
   flex-wrap: wrap;
-  color: var(--color-grey-4) !important;
+  color: var(--color-grey-4);
 }
 
 /* StackItem */
@@ -640,7 +640,7 @@ section > h2 {
 
 .modal-content > h2 {
   margin-top: 32px;
-  background-color: var(--color-white-2);
+  background-color: var(--color-white-3);
   padding-left: 8px;
   border-radius: 8px;
 }
