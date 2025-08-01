@@ -156,6 +156,10 @@ main {
   padding-top: 60px;
 }
 
+.logo {
+  background: url("./assets/logo-spritesheet.png") no-repeat;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -173,12 +177,8 @@ header {
 header .logo {
   width: 32px;
   height: 32px;
-}
-
-header .logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background-size: 272px 32px;
+  background-position: 0 0;
 }
 
 header > h1 {
@@ -549,6 +549,50 @@ section > h2 {
 .link-button.big {
   width: 48px;
   height: 48px;
+}
+
+.link-button.big .logo {
+  background-size: 544px 64px;
+}
+
+#chim-logo {
+  background-position: -64px 0;
+}
+
+#gigs-logo {
+  background-position: -160px 0;
+}
+
+#karpedia-logo {
+  background-position: -256px 0;
+}
+
+#wplanner-logo {
+  background-position: -496px 0;
+}
+
+#tinyroom-logo {
+  background-position: -400px 0;
+}
+
+#gasannes-logo {
+  background-position: -112px 0;
+}
+
+#pj-logo {
+  background-position: -352px 0;
+}
+
+#whatcha-logo {
+  background-position: -448px 0;
+}
+
+#karporeviewer-logo {
+  background-position: -304px 0;
+}
+
+#stockholmes-logo {
+  background-position: -208px 0;
 }
 
 .link-button:hover {
