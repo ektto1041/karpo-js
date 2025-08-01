@@ -11,7 +11,7 @@
     "clean:dist": "rimraf dist",
     "dev": "concurrently \"pnpm run watch\" \"live-server src\"",
     "build": "pnpm run clean:dist && cpx 'src/**/*.html' dist/ && cpx 'src/**/*.css' dist/ && cpx 'src/assets/*' dist/assets && babel src --extensions '.ts' --out-dir dist",
-    "deploy:pf": "cpx 'dist/**/*' ../../docs/"
+    "deploy:pf": "rimraf ../../docs && cpx 'dist/**/*' ../../docs/"
   },
   "license": "UNLICENSED",
   "devDependencies": {
