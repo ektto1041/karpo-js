@@ -696,12 +696,17 @@ section > h2 {
   border-radius: 8px;
 }
 
-.modal-content > img {
+.modal-content picture {
   display: block;
   width: 80%;
   margin: 16px auto 0 auto;
+}
+
+.modal-content picture > img {
+  width: 100%;
   border-radius: 8px;
   box-shadow: var(--shadow-m);
+  display: block;
 }
 
 .modal-content a {
