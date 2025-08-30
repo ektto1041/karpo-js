@@ -1,4 +1,4 @@
-import { Header } from "@/components";
+import { Footer, Header } from "@/components";
 import "@karponents-ui/karpotic/dist/style.css";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -17,7 +17,8 @@ export default function RootLayout({
     <html lang="ko">
       <body>
         <Header />
-        {children}
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
