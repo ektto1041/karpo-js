@@ -1,3 +1,4 @@
+import { Header } from "@/components";
 import "@karponents-ui/karpotic/dist/style.css";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
