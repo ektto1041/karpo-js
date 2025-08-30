@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "NanumGothic";
+  src: url("../../public/NanumGothic.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "NanumGothic";
+  src: url("../../public/NanumGothicBold.woff2") format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "NanumGothic";
+  src: url("../../public/NanumGothicLight.woff2") format("woff2");
+  font-weight: 100;
+}
+
+:root {
+  --karpotic-font-sans: "NanumGothic";
+}
