@@ -1,5 +1,5 @@
 {
-  "name": "karpo-js",
+  "name": "@karpo-js/monorepo",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -7,7 +7,7 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "deploy:pf": "turbo run deploy:pf"
+    "deploy:pf": "pnpm --filter=@karpo-js/portfolio deploy:pf"
   },
   "devDependencies": {
     "prettier": "^3.5.3",
