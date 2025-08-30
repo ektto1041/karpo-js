@@ -1,0 +1,31 @@
+{
+  "name": "@karpo-js/portfolio",
+  "private": "true",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check-types": "tsc --noEmit",
+    "build:dev": "babel src --extensions '.ts' --out-dir src",
+    "watch": "babel src --extensions '.ts' -w -d src",
+    "clean:dev": "rimraf dev",
+    "clean:dist": "rimraf dist",
+    "dev": "concurrently \"pnpm run watch\" \"live-server src\"",
+    "build": "pnpm run clean:dist && cpx 'src/**/*.html' dist/ && cpx 'src/**/*.css' dist/ && cpx 'src/assets/*' dist/assets && babel src --extensions '.ts' --out-dir dist",
+    "deploy:pf": "pnpm run build && cpx 'dist/**/*' ../../docs/"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-typescript": "^7.27.0",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "concurrently": "^9.1.2",
+    "cpx": "^1.5.0",
+    "live-server": "^1.2.2",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3",
+    "chart.js": "^4.4.9"
+  }
+}
